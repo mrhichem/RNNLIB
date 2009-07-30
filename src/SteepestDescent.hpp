@@ -52,19 +52,12 @@ struct SteepestDescent: public DataExporter, public Optimiser
 	{
 		assert(wts.size() == derivs.size());
 		assert(wts.size() == deltas.size());
-		loop(TDDDD t, zip(wts, deltas, derivs, plasts))
+		loop (int i, indices(wts))
 		{
-			double& delta = t.get<1>();
-			double newDelta = t.get<3>() * ((momentum * delta) - (learnRate * t.get<2>()));
-			delta = newDelta;
-			t.get<0>() += newDelta;
+			double delta = plasts[i] * ((momentum * deltas[i]) - (learnRate * derivs[i]));
+			deltas[i] = delta;
+			wts[i] += delta;
 		}
-//		for (int i = 0; i < wts.size(); ++i)
-//		{
-//			double delta = plasts[i] * ((momentum * deltas[i]) - (learnRate * derivs[i]));
-//			deltas[i] = delta;
-//			wts[i] += delta;
-//		}
 		if (verbose)
 		{
 			out << "weight updates:" << endl;

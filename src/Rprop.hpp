@@ -71,53 +71,28 @@ struct Rprop: public DataExporter, public Optimiser
 		assert(wts.size() == derivs.size());
 		assert(wts.size() == deltas.size());
 		assert(wts.size() == prevDerivs.size());
-		loop(TDDDDD t, zip(wts, deltas, derivs, prevDerivs, plasts))
+		loop (int i, indices(wts))
 		{
-			double& wt = t.get<0>();			
-			double& delta = t.get<1>();
-			double& deriv = t.get<2>();
-			double& prevDeriv = t.get<3>();
-			double plast = t.get<4>();
-			double derivTimesPrev =  deriv * prevDeriv;
+			double deriv = derivs[i];
+			double delta = deltas[i];
+			double derivTimesPrev =  deriv * prevDerivs[i];
 			if(derivTimesPrev > 0)
 			{
-				delta = plast * bound(delta * etaPlus, minDelta, maxDelta);
-				wt -= sign(deriv) * delta;
-				prevDeriv = deriv;
+				deltas[i] = bound(delta * etaPlus, minDelta, maxDelta);
+				wts[i] -= sign(deriv) * delta;
+				prevDerivs[i] = deriv;
 			}
 			else if(derivTimesPrev < 0)
 			{
-				delta = plast * bound(delta * etaMin, minDelta, maxDelta);
-				prevDeriv = 0;
+				deltas[i] = bound(delta * etaMin, minDelta, maxDelta);
+				prevDerivs[i] = 0;
 			}
 			else
 			{
-				wt -= sign(deriv) * plast * delta;
-				prevDeriv = deriv;
+				wts[i] -= sign(deriv) * delta;
+				prevDerivs[i] = deriv;
 			}
 		}
-//		for (int i = 0; i < wts.size(); ++i)
-//		{
-//			double deriv = derivs[i];
-//			double delta = deltas[i];
-//			double derivTimesPrev =  deriv * prevDerivs[i];
-//			if(derivTimesPrev > 0)
-//			{
-//				deltas[i] = bound(delta * etaPlus, minDelta, maxDelta);
-//				wts[i] -= sign(deriv) * delta;
-//				prevDerivs[i] = deriv;
-//			}
-//			else if(derivTimesPrev < 0)
-//			{
-//				deltas[i] = bound(delta * etaMin, minDelta, maxDelta);
-//				prevDerivs[i] = 0;
-//			}
-//			else
-//			{
-//				wts[i] -= sign(deriv) * delta;
-//				prevDerivs[i] = deriv;
-//			}
-//		}
 		//use eta adaptations for online training (from Mike Schuster's thesis)
 		if (online)	
 		{
