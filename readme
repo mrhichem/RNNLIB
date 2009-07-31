@@ -3,7 +3,7 @@ RNNLIB is currently only tested for Linux and OSX.
 Building it requires the following: 
 
 - A modern C++ compiler (e.g. gcc 3.0 or higher)
-- GNU Automake
+- GNU Automake version 1.9 (NOTE: will not work with version 1.10)
 - the NetCDF scientific data library. 
 - Boost C++ Libraries (headers only)
 

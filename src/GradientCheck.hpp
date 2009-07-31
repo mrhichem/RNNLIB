@@ -78,19 +78,19 @@ struct GradientCheck
 			{
 				prt_line(out);
 				out << "checking layer " << name << endl;
-			}
-			for (WC_CONN_IT it = range.first; it != range.second; ++it)
-			{
-				if (!check_connection(it->second.get<1>(), it->second.get<2>(), it->second.get<3>()))
+				loop (const WC_CONN_PAIR& p, range)
 				{
-					return false;
+					if (!check_connection(p.second.get<1>(), p.second.get<2>(), p.second.get<3>()))
+					{
+						return false;
+					}
 				}
-			}
-			for (WC_CONN_IT it = range.first; it != range.second; ++it)
-			{
-				if (!check_layer(it->second.get<0>()))
+				loop (const WC_CONN_PAIR& p, range)
 				{
-					return false;
+					if (!check_layer(p.second.get<0>()))
+					{
+						return false;
+					}
 				}
 			}
 		}
@@ -103,7 +103,7 @@ struct GradientCheck
 			return true;
 		}
 		out << "checking connection " << name << endl;
-		for (int i = begin; i < end; ++i)
+		loop(int i, range(begin, end))
 		{
 			//store original weight
 			double oldWt = weights[i];

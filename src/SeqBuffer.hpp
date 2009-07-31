@@ -101,7 +101,7 @@ template <class R> struct CoordIterator
 	}
 	void begin()
 	{
-		for (int i = 0; i < shape.size(); ++i)
+		loop (int i, indices(shape))
 		{
 			pt[i] = ((directions[i] > 0) ? 0 : shape[i] - 1);
 		}

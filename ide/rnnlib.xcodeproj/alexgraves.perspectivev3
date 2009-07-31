@@ -232,6 +232,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,7 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>27</integer>
+									<integer>45</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -310,14 +312,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>568F603E101CCEB900239C41</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Main.cpp</string>
+								<string>Rprop.hpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,27 +325,18 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>568F603F101CCEB900239C41</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Main.cpp</string>
+										<string>Rprop.hpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>56FABDF7102228CC0045447F</string>
+										<string>56FABE3110222DAE0045447F</string>
 										<key>history</key>
 										<array>
 											<string>56CA6547101CD654005E8617</string>
 											<string>56364E38101CD68500FB9FE4</string>
 											<string>56364E54101CDA2700FB9FE4</string>
-											<string>56FABDCD102228CC0045447F</string>
-											<string>56FABDCE102228CC0045447F</string>
-											<string>56FABDCF102228CC0045447F</string>
-											<string>56FABDD0102228CC0045447F</string>
-											<string>56FABDD1102228CC0045447F</string>
-											<string>56FABDD2102228CC0045447F</string>
-											<string>56FABDD3102228CC0045447F</string>
-											<string>56FABDD4102228CC0045447F</string>
-											<string>56FABDD5102228CC0045447F</string>
-											<string>56FABDD6102228CC0045447F</string>
-											<string>56FABDD7102228CC0045447F</string>
+											<string>56FABE2E10222DAE0045447F</string>
+											<string>56FABE2F10222DAE0045447F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -355,37 +346,7 @@
 											<string>56364E3A101CD68500FB9FE4</string>
 											<string>56364E47101CD6BA00FB9FE4</string>
 											<string>56364E56101CDA2700FB9FE4</string>
-											<string>56FABDD8102228CC0045447F</string>
-											<string>56FABDD9102228CC0045447F</string>
-											<string>56FABDDA102228CC0045447F</string>
-											<string>56FABDDB102228CC0045447F</string>
-											<string>56FABDDC102228CC0045447F</string>
-											<string>56FABDDD102228CC0045447F</string>
-											<string>56FABDDE102228CC0045447F</string>
-											<string>56FABDDF102228CC0045447F</string>
-											<string>56FABDE0102228CC0045447F</string>
-											<string>56FABDE1102228CC0045447F</string>
-											<string>56FABDE2102228CC0045447F</string>
-											<string>56FABDE3102228CC0045447F</string>
-											<string>56FABDE4102228CC0045447F</string>
-											<string>56FABDE5102228CC0045447F</string>
-											<string>56FABDE6102228CC0045447F</string>
-											<string>56FABDE7102228CC0045447F</string>
-											<string>56FABDE8102228CC0045447F</string>
-											<string>56FABDE9102228CC0045447F</string>
-											<string>56FABDEA102228CC0045447F</string>
-											<string>56FABDEB102228CC0045447F</string>
-											<string>56FABDEC102228CC0045447F</string>
-											<string>56FABDED102228CC0045447F</string>
-											<string>56FABDEE102228CC0045447F</string>
-											<string>56FABDEF102228CC0045447F</string>
-											<string>56FABDF0102228CC0045447F</string>
-											<string>56FABDF1102228CC0045447F</string>
-											<string>56FABDF2102228CC0045447F</string>
-											<string>56FABDF3102228CC0045447F</string>
-											<string>56FABDF4102228CC0045447F</string>
-											<string>56FABDF5102228CC0045447F</string>
-											<string>56FABDF6102228CC0045447F</string>
+											<string>56FABE3010222DAE0045447F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -469,7 +430,7 @@
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXBuildLogShowsTranscriptDefaultKey</key>
-										<string>{{0, 226}, {744, 93}}</string>
+										<string>{{0, 159}, {744, 160}}</string>
 										<key>PBXProjectModuleGUID</key>
 										<string>XCMainBuildResultsModuleGUID</string>
 										<key>PBXProjectModuleLabel</key>
@@ -510,11 +471,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>56FABDF8102228CC0045447F</string>
+				<string>56FABE3210222DAE0045447F</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>56FABDF9102228CC0045447F</string>
+				<string>56FABE3310222DAE0045447F</string>
 				<string>568F603E101CCEB900239C41</string>
-				<string>56FABDFA102228CC0045447F</string>
+				<string>56FABE3410222DAE0045447F</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -659,14 +620,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>56FABDFB102228CC0045447F</string>
+				<string>56FABE2210222DA40045447F</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>56FABDFC102228CC0045447F</string>
-				<string>56FABDFD102228CC0045447F</string>
-				<string>56FABDFE102228CC0045447F</string>
-				<string>56FABDFF102228CC0045447F</string>
-				<string>56FABE00102228CC0045447F</string>
+				<string>56FABE2310222DA40045447F</string>
+				<string>56FABE2410222DA40045447F</string>
+				<string>56FABE2510222DA40045447F</string>
+				<string>56FABE2610222DA40045447F</string>
+				<string>56FABE2710222DA40045447F</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

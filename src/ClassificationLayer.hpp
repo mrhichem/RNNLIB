@@ -86,7 +86,7 @@ struct ClassificationLayer: public SoftmaxLayer
 			}
 		}
 		this->errorMap.clear();
-		for (int i = 0; i < confusionMatrix.size(); ++i)
+		loop (int i, indices(confusionMatrix))
 		{
 			vector<int>& v = confusionMatrix[i];
 			classTargets[i] = sum(v);
@@ -97,7 +97,7 @@ struct ClassificationLayer: public SoftmaxLayer
 		{
 			this->errorMap["crossEntropyError"] = crossEntropyError;
 			this->errorMap["classificationError"] = sum(classErrors) / numTargets;
-			for (int i = 0; i < confusionMatrix.size(); ++i)
+			loop (int i, indices(confusionMatrix))
 			{
 				if (classTargets[i])
 				{
@@ -105,7 +105,7 @@ struct ClassificationLayer: public SoftmaxLayer
 					if(verbose)
 					{
 						vector<int>& v = confusionMatrix[i];
-						for (int j = 0; j < v.size(); ++j)
+						loop(int j, indices(v))
 						{
 							if (j != i)
 							{

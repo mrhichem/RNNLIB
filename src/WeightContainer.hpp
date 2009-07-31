@@ -30,6 +30,7 @@ along with RNNLIB.  If not, see <http://www.gnu.org/licenses/>.*/
 using namespace std;
 
 typedef multimap<string, tuple<string, string, int, int> >::iterator WC_CONN_IT; 
+typedef pair<string, tuple<string, string, int, int> > WC_CONN_PAIR;
 
 struct WeightContainer: public DataExporter
 {
@@ -89,13 +90,13 @@ struct WeightContainer: public DataExporter
 	}
 	void save_by_conns(vector<double>& container, const string& nam)
 	{
-		for (WC_CONN_IT it = connections.begin(); it != connections.end(); ++it)
+		loop(const WC_CONN_PAIR& p, connections)
 		{
-			VDI begin = container.begin() + it->second.get<2>();
-			VDI end = container.begin() + it->second.get<3>();
+			VDI begin = container.begin() + p.second.get<2>();
+			VDI end = container.begin() + p.second.get<3>();
 			if (begin != end)
 			{
-				save_range(make_pair(begin, end), it->second.get<1>() + "_" + nam);
+				save_range(make_pair(begin, end), p.second.get<1>() + "_" + nam);
 			}
 		}
 	}
