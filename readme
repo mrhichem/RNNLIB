@@ -2,18 +2,11 @@ RNNLIB is currently only tested for Linux and OSX.
 
 Building it requires the following:
 
-<<<<<<< HEAD:readme
-- A modern C++ compiler (e.g. gcc 3.0 or higher)
-- GNU Automake version 1.9 (NOTE: will not work with version 1.10)
-- the NetCDF scientific data library. 
-- Boost C++ Libraries (headers only)
-=======
 * A modern C++ compiler (e.g. gcc 3.0 or higher)
 * GNU Libtool
 * GNU automake version 1.9 (NOTE: will not work with version 1.10)
 * the NetCDF scientific data library
 * Boost C++ Libraries version 1.36 or higher (headers only, no compilation needed)
->>>>>>> experimental:readme
 
 In addition, the following python packages are needed for the auxiliary scripts in the ‘utils’ directory:
 
