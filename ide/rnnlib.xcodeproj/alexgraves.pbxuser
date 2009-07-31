@@ -217,9 +217,9 @@
 	};
 	56895FF2101CD10900762B23 /* Main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {695, 3276}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1570}";
+			sepNavIntBoundsRect = "{{0, 0}, {1056, 3164}}";
+			sepNavSelRange = "{6472, 0}";
+			sepNavVisRange = "{5597, 1427}";
 		};
 	};
 	5689600A101CD10900762B23 /* Trainer.hpp */ = {

@@ -184,7 +184,17 @@ int main(int argc, char* argv[])
 		out << "output path: " << endl << displayPath << endl;
 		net->feed_forward(*testSeq);
 		net->print_output_shape(out);
-		net->outputLayer->outputErrors.get(jacobianCoords) = net->outputLayer->outputActivations.get(jacobianCoords);
+		int D = net->outputLayer->num_seq_dims();
+		check((jacobianCoords.size() == D) || (jacobianCoords.size() == (D - 1)), "Jacobian coords " + str(jacobianCoords) + " wrong size for output layer");
+		if (jacobianCoords.size() == D)
+		{
+			net->outputLayer->outputErrors.get(jacobianCoords) = net->outputLayer->outputActivations.get(jacobianCoords);
+		}
+		else
+		{
+			net->outputLayer->outputErrors[jacobianCoords] = net->outputLayer->outputActivations[jacobianCoords];
+
+		}	
 		net->feed_back();
 		DataExportHandler::instance().display(displayPath);
 	}

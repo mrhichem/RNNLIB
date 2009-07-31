@@ -842,6 +842,12 @@ template<class T> struct View: public sub_range<pair <T*, T*> >
 		check(i < this->size(), "at(" + str(i) + ") called for view of size " + str(this->size()));
 		return (*this)[i];	
 	}
+	template<class T2> const View<T>& operator =(const View<T2>& v) const
+	{
+		assert(v.size() == this->size());
+		copy(v, *this);
+		return *this;
+	}
 };
 
 typedef const tuple<View<double>&, vector<double>&>& TVWDVD;
