@@ -278,13 +278,17 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+<<<<<<< HEAD:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 									<integer>45</integer>
+=======
+									<integer>52</integer>
+>>>>>>> experimental:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 242}, {185, 784}}</string>
+							<string>{{0, 273}, {185, 784}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -317,7 +321,11 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>568F603E101CCEB900239C41</string>
 								<key>PBXProjectModuleLabel</key>
+<<<<<<< HEAD:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 								<string>Rprop.hpp</string>
+=======
+								<string>TranscriptionLayer.hpp</string>
+>>>>>>> experimental:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,18 +333,31 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>568F603F101CCEB900239C41</string>
 										<key>PBXProjectModuleLabel</key>
+<<<<<<< HEAD:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 										<string>Rprop.hpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
 										<string>56FABE3110222DAE0045447F</string>
+=======
+										<string>TranscriptionLayer.hpp</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>56FABE721022E7D00045447F</string>
+>>>>>>> experimental:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 										<key>history</key>
 										<array>
 											<string>56CA6547101CD654005E8617</string>
 											<string>56364E38101CD68500FB9FE4</string>
 											<string>56364E54101CDA2700FB9FE4</string>
+<<<<<<< HEAD:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 											<string>56FABE2E10222DAE0045447F</string>
 											<string>56FABE2F10222DAE0045447F</string>
+=======
+											<string>56FABE6F1022E7D00045447F</string>
+											<string>56FABE701022E7D00045447F</string>
+>>>>>>> experimental:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -346,7 +367,11 @@
 											<string>56364E3A101CD68500FB9FE4</string>
 											<string>56364E47101CD6BA00FB9FE4</string>
 											<string>56364E56101CDA2700FB9FE4</string>
+<<<<<<< HEAD:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 											<string>56FABE3010222DAE0045447F</string>
+=======
+											<string>56FABE711022E7D00045447F</string>
+>>>>>>> experimental:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -360,18 +385,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {744, 451}}</string>
+								<string>{{0, 0}, {744, 797}}</string>
 								<key>RubberWindowFrame</key>
 								<string>59 35 951 843 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>451pt</string>
+							<string>797pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>346pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -385,7 +410,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {744, 319}}</string>
+										<string>{{10, 27}, {744, -27}}</string>
 										<key>RubberWindowFrame</key>
 										<string>59 35 951 843 0 0 1440 878 </string>
 									</dict>
@@ -430,7 +455,11 @@
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXBuildLogShowsTranscriptDefaultKey</key>
+<<<<<<< HEAD:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 										<string>{{0, 159}, {744, 160}}</string>
+=======
+										<string>{{0, 109}, {744, 210}}</string>
+>>>>>>> experimental:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 										<key>PBXProjectModuleGUID</key>
 										<string>XCMainBuildResultsModuleGUID</string>
 										<key>PBXProjectModuleLabel</key>
@@ -471,11 +500,19 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
+<<<<<<< HEAD:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 				<string>56FABE3210222DAE0045447F</string>
 				<string>1CA23ED40692098700951B8B</string>
 				<string>56FABE3310222DAE0045447F</string>
 				<string>568F603E101CCEB900239C41</string>
 				<string>56FABE3410222DAE0045447F</string>
+=======
+				<string>56FABE731022E7D00045447F</string>
+				<string>1CA23ED40692098700951B8B</string>
+				<string>56FABE741022E7D00045447F</string>
+				<string>568F603E101CCEB900239C41</string>
+				<string>56FABE751022E7D00045447F</string>
+>>>>>>> experimental:ide/rnnlib.xcodeproj/alexgraves.perspectivev3
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
