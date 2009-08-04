@@ -1,6 +1,4 @@
-#! /usr/bin/env python
-
-from matplotlib.lines import Line2D
+#!/usr/bin/env python
 from optparse import OptionParser
 from matplotlib.pyplot import *
 from numpy import *

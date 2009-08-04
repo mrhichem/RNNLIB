@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 import netcdf_helpers
 import sys
 from numpy import *

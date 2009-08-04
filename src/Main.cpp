@@ -108,11 +108,12 @@ int main(int argc, char* argv[])
 	vector<string> dataFiles = conf.get_list<string>(dataFileString);
 	int dataFileNum = conf.get<int>("dataFileNum", 0);
 	check(dataFiles.size() > dataFileNum, "no " + ordinal(dataFileNum) + " file in size " + str(dataFiles.size()) + " file list " + dataFileString + " in " + configFilename);
-	DataHeader header(dataFiles[dataFileNum], task, 1);
+	string datafile = dataFiles[dataFileNum];
+	DataHeader header(datafile, task, 1);
 	DataSequence* testSeq = 0;
 	if (display || gradCheck || jacobianCoords.size())
 	{
-		NetcdfDataset* data = new NetcdfDataset(dataFiles[dataFileNum], task, displaySequence);
+		NetcdfDataset* data = new NetcdfDataset(datafile, task, displaySequence);
 		testSeq = new DataSequence((*data)[0]);
 		delete data;
 	}
@@ -178,14 +179,17 @@ int main(int argc, char* argv[])
  	}
 	else if (jacobianCoords.size())
 	{
+		PRINT(dataset, out);
+		PRINT(datafile, out);
+		out << endl;
 		out << "data header:" << endl << header << endl;
 		out << "calculating Jacobian for sequence " << displaySequence << " at coords " << jacobianCoords << endl;
 		out << *testSeq; 
 		out << "output path: " << endl << displayPath << endl;
 		net->feed_forward(*testSeq);
 		net->print_output_shape(out);
-		int D = net->outputLayer->num_seq_dims();
-		check((jacobianCoords.size() == D) || (jacobianCoords.size() == (D - 1)), "Jacobian coords " + str(jacobianCoords) + " wrong size for output layer");
+		int D = net->outputLayer->num_seq_dims() + 1;
+		check((jacobianCoords.size() == D) || (jacobianCoords.size() == (D - 1)), "Jacobian coords length " + str(jacobianCoords.size()) + " for output layer depth " + str(D));
 		if (jacobianCoords.size() == D)
 		{
 			net->outputLayer->outputErrors.get(jacobianCoords) = net->outputLayer->outputActivations.get(jacobianCoords);
