@@ -37,3 +37,8 @@ You can change the install path with the —prefix option of the configure scrip
 
 It is recommended that you add the directory containing the ‘rnnlib’ binary to your path,
 as otherwise the tools in the ‘utilities’ directory will not work.
+
+Project files are provided for the following integrated development environments in the 'ide' directory
+
+* kdevelop (KDE, linux)
+* xcode (Apple OSX)
