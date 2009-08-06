@@ -24,9 +24,6 @@ along with RNNLIB.  If not, see <http://www.gnu.org/licenses/>.*/
 #include "SteepestDescent.hpp"
 #include "Rprop.hpp"
 #include "Trainer.hpp"
-#include "MemoryNet.hpp"
-#include "CodeNet.hpp"
-#include "PmNet.hpp"
 
 typedef boost::iostreams::tee_device<ostream, ofstream> TeeDev;
 typedef boost::iostreams::stream<TeeDev> TeeStream;
@@ -118,22 +115,7 @@ int main(int argc, char* argv[])
 		delete data;
 	}
 	Mdrnn *net;
-	if (task == "code")
-	{
-		net = new CodeNet(out, conf, header);
-	}
-	else if (task == "memory")
-	{
-		net = new MemoryNet(out, conf, header);
-	}
-	else if (task == "pm")
-	{
-		net = new PmNet(out, conf, header);
-	}
-	else
-	{
-		net = new MultilayerNet(out, conf, header);
-	}
+	net = new MultilayerNet(out, conf, header);
 	out << endl << "network:" << endl;
 	PRINT(task, out);
 	out << *net;
