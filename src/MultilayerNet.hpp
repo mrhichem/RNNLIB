@@ -23,7 +23,6 @@ along with RNNLIB.  If not, see <http://www.gnu.org/licenses/>.*/
 #include "ClassificationLayer.hpp"
 #include "AutoregressionLayer.hpp"
 #include "TranscriptionLayer.hpp"
-#include "DecodingLayer.hpp"
  
 struct MultilayerNet: public Mdrnn
 {
@@ -101,16 +100,6 @@ struct MultilayerNet: public Mdrnn
  		{
 			assert(this->num_seq_dims());
  			output = this->outputLayer = new TranscriptionLayer(this->out, outputName, data.targetLabels);
-			if (this->num_seq_dims() > 1)
-			{
-				output = this->collapse_layer(this->hiddenLayers.back(), this->outputLayer, list_of(true));
-			}
- 		}
- 		else if (task == "decode")
- 		{
-			assert(this->num_seq_dims());
- 			output = this->outputLayer = new DecodingLayer(this->out, outputName, data.targetLabels, conf.get<string>("dictionary", ""),
-																conf.get<string>("bigrams", ""), conf.get<int>("nBest", 1), conf.get<int>("fixedLength", -1));
 			if (this->num_seq_dims() > 1)
 			{
 				output = this->collapse_layer(this->hiddenLayers.back(), this->outputLayer, list_of(true));

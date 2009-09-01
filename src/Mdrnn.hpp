@@ -29,7 +29,6 @@ along with RNNLIB.  If not, see <http://www.gnu.org/licenses/>.*/
 #include "LstmLayer.hpp"
 #include "BlockLayer.hpp"
 #include "NetcdfDataset.hpp"
-#include "SamplingLayer.hpp"
 #include "GatherLayer.hpp"
 #include "CollapseLayer.hpp"
 #include "CopyConnection.hpp"
